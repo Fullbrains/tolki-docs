@@ -20,7 +20,7 @@ const slug = computed(() =>
 
 const collection = computed(() => ('content_' + locale.value) as keyof Collections)
 
-const { data: page } = await useAsyncData('page-' + slug.value, async () => {
+const { data: page } = await useAsyncData('page-' + locale.value + '-' + slug.value, async () => {
   const content = await queryCollection(collection.value).path(slug.value).first()
 
   if (!content && locale.value !== 'en') {
@@ -36,7 +36,7 @@ if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
 
-const { data: rawSurround } = await useAsyncData(`${slug.value}-surround`, () => {
+const { data: rawSurround } = await useAsyncData(`${locale.value}-${slug.value}-surround`, () => {
   return queryCollectionItemSurroundings(collection.value, slug.value, {
     fields: ['description']
   })
