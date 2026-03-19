@@ -49,7 +49,7 @@ Aggiungi un assistente chat basato su AI a qualsiasi sito web con un singolo tag
     <tolki-chat
       bot="YOUR-BOT-UUID"
       position="right"
-      dark="auto"
+      theme="auto"
       lang="it">
     </tolki-chat>
   filename: index.html
@@ -64,7 +64,7 @@ Aggiungi un assistente chat basato su AI a qualsiasi sito web con un singolo tag
   <tolki-chat
     bot="YOUR-BOT-UUID"
     position="right"
-    dark="auto"
+    theme="auto"
     lang="it">
   </tolki-chat>
   ```

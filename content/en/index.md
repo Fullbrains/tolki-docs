@@ -49,7 +49,7 @@ Add an AI-powered chat assistant to any website with a single HTML tag. Fully cu
     <tolki-chat
       bot="YOUR-BOT-UUID"
       position="right"
-      dark="auto"
+      theme="auto"
       lang="en">
     </tolki-chat>
   filename: index.html
@@ -64,7 +64,7 @@ Add an AI-powered chat assistant to any website with a single HTML tag. Fully cu
   <tolki-chat
     bot="YOUR-BOT-UUID"
     position="right"
-    dark="auto"
+    theme="auto"
     lang="en">
   </tolki-chat>
   ```
