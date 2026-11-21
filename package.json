@@ -11,7 +11,7 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "@fullbrains/stem": "^0.2.16",
+    "@fullbrains/stem": "^0.2.19",
     "@fullbrains/tailwindcss": "^1.10.2",
     "@fullbrains/vimana": "^1.1.1",
     "@iconify-json/lucide": "^1.2.98",
