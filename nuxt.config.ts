@@ -16,16 +16,6 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  devServer: {
-    port: 3452
-  },
-
-  ui: {
-    theme: {
-      colors: ['primary', 'secondary', 'success', 'info', 'warning', 'error']
-    }
-  },
-
   content: {
     build: {
       markdown: {
@@ -34,6 +24,16 @@ export default defineNuxtConfig({
         }
       }
     }
+  },
+
+  ui: {
+    theme: {
+      colors: ['primary', 'secondary', 'success', 'info', 'warning', 'error']
+    }
+  },
+
+  devServer: {
+    port: 3452
   },
 
   experimental: {
@@ -61,10 +61,6 @@ export default defineNuxtConfig({
     }
   },
 
-  icon: {
-    provider: 'iconify'
-  },
-
   i18n: {
     locales: [
       { code: 'en', name: 'English', language: 'en-US' },
@@ -72,5 +68,9 @@ export default defineNuxtConfig({
     ],
     strategy: 'prefix_except_default',
     defaultLocale: 'en'
+  },
+
+  icon: {
+    provider: 'iconify'
   }
 })

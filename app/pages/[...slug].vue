@@ -48,7 +48,7 @@ const surround = computed(() => {
   if (!rawSurround.value) return rawSurround.value
   const prefix = locale.value === defaultLocale ? '' : '/' + locale.value
   if (!prefix) return rawSurround.value
-  return rawSurround.value.map((item: any) => item ? { ...item, path: prefix + item.path } : item)
+  return rawSurround.value.map(item => item ? { ...item, path: prefix + item.path } : item)
 })
 
 const title = page.value.seo?.title || page.value.title

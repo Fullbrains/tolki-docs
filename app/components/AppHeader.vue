@@ -8,10 +8,14 @@ const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 const { barVisible, toggleBar } = useBotUuid()
 
+/** Lingue configurate in i18n: servono solo codice e nome. */
+type LocaleOption = { code: typeof locale.value, name?: string }
+const localeOptions = computed(() => locales.value as LocaleOption[])
+
 const localeItems = computed(() => {
-  return locales.value
-    .filter((l: any) => l.code !== locale.value)
-    .map((l: any) => ({
+  return localeOptions.value
+    .filter(l => l.code !== locale.value)
+    .map(l => ({
       label: l.name || l.code,
       icon: 'i-lucide-globe',
       onSelect: () => {
@@ -21,8 +25,8 @@ const localeItems = computed(() => {
 })
 
 const currentLocaleLabel = computed(() => {
-  const current = locales.value.find((l: any) => l.code === locale.value)
-  return (current as any)?.name || locale.value.toUpperCase()
+  const current = localeOptions.value.find(l => l.code === locale.value)
+  return current?.name || locale.value.toUpperCase()
 })
 
 const botBarTooltip = computed(() => locale.value === 'it' ? 'Bot UUID' : 'Bot UUID')
